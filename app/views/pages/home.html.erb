@@ -1,0 +1,172 @@
+
+  <div id="shrink" class="wrapper home-page">
+
+<!-- HEADER -->
+    <div class="one">
+      <nav id='scroll' class="nav d-none d-md-block">
+        <div id='adjust-height' class="listcontainer">
+          <ul id='shrink' class='unorderedlist main'>
+            <li class="header-menu-center"><a style="color:#b8860b;" href='home.html.erb'>HOME</a></li>
+            <li class="header-menu-center dropdown">
+              <a href='services.html' class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">SERVICES<span class="caret"></span></a>
+              <!-- <div class='dropdown-content'>
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenu">
+                  <li class="dropdown-item"><a href="#">Spray Tans</a></li>
+                  <li class="dropdown-item"><a href="#">Hair</a></li>
+                  <li class="dropdown-item"><a href="#">Makeup</a></li>
+                  <li class="dropdown-item"><a href="#">Waxing</a></li>
+                </ul>
+              </div> -->
+              <ul class="dropdown-menu vip-tracker">
+                <li><a href="soccer.html">SOCCER</a></li>
+                <li><a href="nfl.html">NFL</a></li>
+                <li><a href="ncaaf.html">NCAAF</a></li>
+                <li><a href="mlb.html">MLB</a></li>
+                <li><a href="nhl.html">NHL</a></li>
+              </ul>
+            </li>
+            <li id='scroll-left-align' class="header-menu-center"><a href='home.html'><%= image_tag "mss11try.png", id: "header-logo-shrink" %></a></li>
+            <li class="header-menu-center"><a href='packages.html'>COOL PAGE</a></li>
+            <!-- <li class="header-menu-center"><a href='gallery.html'>GALLERY</a></li> -->
+            <li class="header-menu-center"><a href='contact.html'>CONTACT</a></li>
+            <!-- <li class="header-menu-center"><a href='reviews.html'>REVIEWS</a></li> -->
+          </ul>
+        </div>
+      </nav>
+<!-- mobile header -->
+      <nav class='mobile-header d-block d-md-none'>
+      <div class='mobile-fixed-header' id='mobileScroll'>
+        <div class='menu-buttons'>
+          <ul class='unorderedlist-mobile-fixed'>
+            <!-- <div class=""> -->
+            <li class='mobile-menu-left'>
+              <div class="first-test">
+                <a class="btn btn primary" href="#collapseExampleFirst" data-toggle="collapse" data-target="#collapseExampleFirst" role="button" aria-controls="#collapseExampleFirst" aria-expanded="false"><%= image_tag "hamburger-menu-icon.png", id: "header-menu-mobile" %></a>
+              </div>
+              <div class="collapse" id="collapseExampleFirst">
+                <ul class="unorderedlist-mobile">
+                  <li class="mobile-left-menu">
+                    <a style="color:#b8860b;" class='border-top' href='index.html'>HOME</a>
+                  </li>
+                    <!-- <div class=""> -->
+                  <li class="mobile-left-menu">
+                    <div class="test">
+                      <a class="dropdown-toggle" href="#collapseExample" data-toggle="collapse" role="button" aria-controls="#collapseExample" aria-expanded="false">VIP TRACKER</a>
+                    </div>
+                    <div class="collapse" id="collapseExample">
+                      <ul class="menu">
+                        <li><a href="soccer.html">SOCCER</a></li>
+                        <li><a href="nfl.html">NFL</a></li>
+                        <li><a href="ncaaf.html">NCAAF</a></li>
+                        <li><a href="mlb.html">MLB</a></li>
+                        <li><a href="nhl.html">NHL</a></li>
+                      </ul>
+                    </div>
+                  </li>
+                  <li class="mobile-left-menu"><a href='packages.html'>BUY PACKAGES</a></li>
+                  <li class="mobile-left-menu"><a href='contact.html'>CONTACT</a></li>
+                </ul>
+              </div>
+            </li>
+            <li class='mobile-menu-center'><a href='index.html'><%= image_tag "logo.png", id: "header-logo-shrink" %></a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    </div>
+
+<!-- HERO IMAGE -->
+    <div class="two">
+      <div class="herocontainer">
+        <%= image_tag "landscape.jpg" %>
+      </div>
+    </div>
+
+<!-- ABOUT SECTION -->
+    <div class="three">
+      <h1>Welcome to My Website!</h1>
+        <!-- <p><br><br>
+        Michael Shea, Software QA Engineer<br><br>
+        10+ Years of Professional QA Experience
+        <br><br>
+        Client Packages Available at VIP.lablocks@gmail.com</p> -->
+        <h3>Michael Shea, Software QA Engineer</h3><br>
+        <p>Hi there. I’m a Boston‑based QA professional with over 10 years of experience ensuring software quality, reliability, and user trust. Outside of work, I stay active — whether I’m at the gym, playing golf or ice hockey, or out bike riding. I’m equally at home cooking for friends and family, traveling, spending time at the beach, and enjoying life with the people who matter most.<br><br>
+        </p>
+    </div>
+    <div class="four homepage-four">
+       <%= image_tag "test.png" %>
+    </div>
+
+<!-- TESTIMONIALS -->
+    <div class="five">
+      <div class="testimonial-section">
+        <h2>Testimonials</h2><br>
+<!-- carousel -->
+        <div class="carousel-container">
+          <div id="carouselIndicators" class="carousel slide" data-ride="carousel" data-interval="6000">
+            <ol class="carousel-indicators">
+              <li data-target="#carouselIndicators" data-slide-to="0" class="active"></li>
+              <li data-target="#carouselIndicators" data-slide-to="1"></li>
+              <li data-target="#carouselIndicators" data-slide-to="2"></li>
+            </ol>
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <div class="testimonials">
+                  <p>"Michael is an exceptional QA professional. His attention to detail and commitment to software quality are unmatched."<br>
+                    <strong>-Anonymous client</strong></p>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <div class="testimonials">
+                  <p>"Michael found a critical bug that would have caused a major issue in production right off the bat! Very impressive."<br>
+                    <strong>-Anonymous client</strong></p>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <div class="testimonials">
+                  <p>"His services are top-notch. I've never had such a smooth QA process. His spreadsheets made it very easy to track and manage."<br>
+                    <strong>-Anonymous client</strong></p>
+                </div>
+              </div>
+            </div>
+            <!-- <a class="carousel-control-prev" href="#carouselIndicators" role="button" data-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselIndicators" role="button" data-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="sr-only">Next</span>
+            </a> -->
+          </div>
+        </div>
+      </div>
+    </div>
+<!-- CMS Section -->
+  <div class="six">
+    <div class="info-section">
+      <h2>Software Quality Assurance (QA) Consulting</h2>
+      <div class='info'>
+      <p>Build with Confidence. Launch with Certainty.</p><br><br>
+      </div>
+          <div class='ash-insta-line'>
+          <ul class='insta-list'>
+            <li class="insta-line"><a href='https://www.linkedin.com/in/msshea/' id="linkedin-link">LinkedIn</a></li>
+            <li class="insta-line"><a href='https://www.linkedin.com/in/msshea/'><%= image_tag "linkedin-25.png", class: "ash-insta-logo" %></a></li>
+          </ul>
+        </div>
+    </div>
+  </div>
+<!-- FOOTER -->
+    <div class="seven">
+      <ul class='unorderedlistfooter'>
+        <li class="footer-menu-left"><a href='https://www.instagram.com/mshea/'><i>site design by<strong> M.Shea</strong></i></a></li>
+        <!-- <li class="footer-menu-right-fb"><a href='https://www.facebook.com'><img src='images/f_logo.png'></a></li> -->
+        <!-- <li class="footer-menu-right"><a href='https://www.instagram.com/estheticsbyash/'><img src='images/i_logo.png'></a></li> -->
+      </ul>
+    </div>
+  </div>
+
+</body>
+
+</html>
