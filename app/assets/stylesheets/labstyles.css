@@ -41,7 +41,7 @@
   height: 100%;
 }
 .home-page .two {
-  height: 75vh;
+  height: 70vh;
 }
 .home-page h1 {
   text-shadow: 1px 1px 2px #000000 !important;
@@ -103,6 +103,10 @@ html {
   scroll-behavior: smooth;
 }
 
+body {
+  font-size: 1.05rem;
+}
+
 a {
   color: #2c3230;
   transition-timing-function: ease;
@@ -137,9 +141,9 @@ h2 {
   /* color: #b8860b; */
 }
 h3 {
-  font-size: 1.1rem;
+  font-size: 1.4rem;
   font-weight: 600;
-  color: ;
+  color: #b8860b;
 }
 p {
   font-weight: 400;
@@ -168,9 +172,6 @@ p {
   font-size: 14px;
 } */
 
-.dropdown-content {
-  /* display: none; */
-}
 
 .dropdown-item a:hover {
   text-decoration: none;
@@ -208,9 +209,9 @@ p {
 
 #scroll.active {
   border-width: thin;
-  -webkit-box-shadow: 0 6px 20px -6px #DCDCDC;
-  -moz-box-shadow: 0 6px 20px -6px #DCDCDC;
-  box-shadow: 0 6px 20px -6px #DCDCDC;
+  -webkit-box-shadow: 0 6px 35px -6px #DCDCDC;
+  -moz-box-shadow: 0 6px 35px -6px #DCDCDC;
+  box-shadow: 0 6px 35px -6px #DCDCDC;
   border-bottom: 0;
   padding: 0px;
   height: 60px;
@@ -607,14 +608,6 @@ p {
   text-shadow: 1px;
 } */
 
-.contact-page .three {
-  grid-row: ;
-}
-
-.contact-page .ash-insta-line {
-}
-
-
 
 /* MOBILE */
 
@@ -763,9 +756,6 @@ a[text=Menu] {
   font-size: 10px;
   font-weight: 500;
   font-family: -apple-system;
-}
-
-.unorderedlist-mobile .menu-toggle {
 }
 
 @media (max-width: 768px) {
@@ -971,39 +961,39 @@ a[text=Menu] {
     padding-left: 0% !important;
     padding-right: 0% !important;
   } */
-}
-
-
-@media (min-width: 769px and max-width: 930px) {
-
-}
 
 /* DESKTOP ONLY */
+@media (min-width: 1000px) {
+  .herocontainer img {
+    transform: translateY(-110px);
+  }
+}
+
 @media (min-width: 1151px) {
   .herocontainer img {
     width: 100%;
     height: 100%;
     object-fit: contain;
-    transform: translateY(-60px);
+    transform: translateY(-160px);
 
   }
 }
 
 @media (min-width: 1250px) {
   .herocontainer img {
-    transform: translateY(-110px);
+    transform: translateY(-210px);
   }
 }
 
 @media (min-width: 1350px) {
   .herocontainer img {
-    transform: translateY(-160px);
+    transform: translateY(-260px);
   }
 }
 
 @media (min-width: 1450px) {
   .herocontainer img {
-    transform: translateY(-220px);
+    transform: translateY(-280px);
   }
 }
 

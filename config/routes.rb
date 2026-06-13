@@ -14,5 +14,10 @@ Rails.application.routes.draw do
   # root "posts#index"
 
   root "pages#home"
-  get "packages" => "pages#packages", as: :packages
+  get "coolpage" => "pages#coolpage", as: :coolpage
+  get "about" => "pages#about", as: :about
+  get "contact" => "pages#contact", as: :contact
+  get "portfolio" => "pages#portfolio", as: :portfolio
+  get "resume" => "pages#resume", as: :resume
+  get "testimonials" => "pages#testimonials", as: :testimonials
 end
