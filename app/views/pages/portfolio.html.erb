@@ -1,37 +1,13 @@
-<!DOCTYPE html>
-<html lang='en-US'>
-
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-<title> Lab Locks - Soccer</title>
-
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-<link rel='stylesheet' href='labstyles.css'>
-
-<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-<script src="scripts.js"></script>
-
-</head>
-<style>
-
-</style>
-
-<body>
-
-  <div id="shrink" class="wrapper soccer-page">
+ <div id="shrink" class="wrapper soccer-page">
 
 <!-- HEADER -->
     <div class="one">
       <nav id='scroll' class="nav">
         <div id='adjust-height' class="listcontainer">
           <ul id='shrink' class='unorderedlist main'>
-            <li class="header-menu-center"><a href='index.html'>HOME</a></li>
+            <li class="header-menu-center"><a href='/'>HOME</a></li>
             <li class="header-menu-center dropdown">
-              <a href='#' class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">VIP TRACKER</a>
+              <a href='#' class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">ABOUT ME</a>
               <!-- <div class='dropdown-content'>
                 <ul class="dropdown-menu" aria-labelledby="dropdownMenu">
                   <li class="dropdown-item"><a href="#">Spray Tans</a></li>
@@ -41,17 +17,16 @@
                 </ul>
               </div> -->
               <ul class="dropdown-menu vip-tracker">
-                <li><a href="soccer.html">SOCCER</a></li>
-                <li><a style="color:#b8860b;" href="nfl.html">NFL</a></li>
-                <li><a href="ncaaf.html">NCAAF</a></li>
-                <li><a href="mlb.html">MLB</a></li>
-                <li><a href="nhl.html">NHL</a></li>
+                <li><a href="about">ABOUT ME</a></li>
+                <li><a href="resume">RESUME</a></li>
+                <li><a style="color:#b8860b;" href="portfolio">PORTFOLIO</a></li>
+                <li><a href="testimonials">TESTIMONIALS</a></li>
               </ul>
             </li>
-            <li id='scroll-left-align' class="header-menu-center"><a href='index.html'><img id='header-logo-shrink' src='images/logo.png'></a></li>
-            <li class="header-menu-center"><a href='packages.html'>BUY PACKAGES</a></li>
+            <li id='scroll-left-align' class="header-menu-center"><a href='/'><%= image_tag "mss11try.png", id: "header-logo-shrink" %></a></li>
+            <li class="header-menu-center"><a href='coolpage'>COOL PAGE</a></li>
             <!-- <li class="header-menu-center"><a href='gallery.html'>GALLERY</a></li> -->
-            <li class="header-menu-center"><a href='contact.html'>CONTACT</a></li>
+            <li class="header-menu-center"><a href='contact'>CONTACT</a></li>
             <!-- <li class="header-menu-center"><a href='reviews.html'>REVIEWS</a></li> -->
           </ul>
         </div>
@@ -64,34 +39,33 @@
       <!-- <div class=""> -->
       <li class='mobile-menu-left'>
         <div class="first-test">
-          <a class="btn btn primary" href="#collapseExampleFirst" data-toggle="collapse" data-target="#collapseExampleFirst" role="button" aria-controls="#collapseExampleFirst" aria-expanded="false"><img id='header-menu-mobile' src='images/hamburger-menu-icon.png'></a>
+          <a class="btn btn primary" href="#collapseExampleFirst" data-toggle="collapse" data-target="#collapseExampleFirst" role="button" aria-controls="#collapseExampleFirst" aria-expanded="false"><%= image_tag "hamburger-menu-icon.png", id: "header-menu-mobile" %></a>
         </div>
         <div class="collapse" id="collapseExampleFirst">
           <ul class="unorderedlist-mobile">
             <li class="mobile-left-menu">
-              <a class='border-top' href='index.html'>HOME</a>
+              <a class='border-top' href='/'>HOME</a>
             </li>
               <!-- <div class=""> -->
             <li class="mobile-left-menu">
               <div class="test">
-                <a class="dropdown-toggle" href="#collapseExample" data-toggle="collapse" role="button" aria-controls="#collapseExample" aria-expanded="false">VIP TRACKER</a>
+                <a class="dropdown-toggle" href="#collapseExample" data-toggle="collapse" role="button" aria-controls="#collapseExample" aria-expanded="false">ABOUT ME</a>
               </div>
               <div class="collapse" id="collapseExample">
                 <ul class="menu">
-                  <li><a href="soccer.html">SOCCER</a></li>
-                  <li><a style="color:#b8860b;" href="nfl.html">NFL</a></li>
-                  <li><a href="ncaaf.html">NCAAF</a></li>
-                  <li><a href="mlb.html">MLB</a></li>
-                  <li><a href="nhl.html">NHL</a></li>
+                  <li><a href="about">ABOUT ME</a></li>
+                  <li><a href="resume">RESUME</a></li>
+                  <li><a style="color:#b8860b;" href="portfolio">PORTFOLIO</a></li>
+                  <li><a href="testimonials">TESTIMONIALS</a></li>
                 </ul>
               </div>
             </li>
-            <li class="mobile-left-menu"><a href='packages.html'>BUY PACKAGES</a></li>
-            <li class="mobile-left-menu"><a href='contact.html'>CONTACT</a></li>
+            <li class="mobile-left-menu"><a href='coolpage'>COOL PAGE</a></li>
+            <li class="mobile-left-menu"><a href='contact'>CONTACT</a></li>
           </ul>
         </div>
       </li>
-      <li class='mobile-menu-center'><a href='index.html'><img id='header-logo-mobile' src='images/logo.png'></a></li>
+      <li class='mobile-menu-center'><a href='/'><%= image_tag "mss11try.png", id: "header-logo-shrink" %></a></li>
     </ul>
   </div>
 </div>
