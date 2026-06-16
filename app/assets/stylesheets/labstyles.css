@@ -481,13 +481,17 @@ p {
 
 .soccer-page-two {
   min-height: 12rem !important;
-  padding-top: 26px !important;
+  /* padding-top: 26px !important; */
   text-align: center;
   max-height: 30vw;
 }
 
 .soccer-page-two h1 {
   padding-bottom: 18px;
+}
+
+.soccer-page-two img {
+  transform: translateY(-200px);
 }
 
 .soccer-page-three h1 {
