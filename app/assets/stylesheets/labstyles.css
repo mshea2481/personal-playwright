@@ -508,11 +508,17 @@ p {
   /* max-height: 10%; */
 }
 
+/* ABOUT PAGE */
+.testimonial-section.image-gallery {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  min-height: 600px;
+}
 
 
 /* BUY PACKAGES PAGE */
-
-
 
 .packages-page-header {
   /* display: flex; */
