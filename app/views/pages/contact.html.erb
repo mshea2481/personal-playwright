@@ -72,10 +72,49 @@
 </nav>
 </div>
 
-<!-- ABOUT SECTION -->
+<!-- HERO IMAGE -->
+    <div class="two">
+<!-- CONTACT FORM -->
+<div class="six">
+  <div class="info-section">
+    <h2 class="contact-form-heading" style="text-align:center;">Get In Touch</h2>
 
-<!-- CMS Section -->
-  <div class="six">
+    <%= form_with url: contact_path, method: :post, local: true, html: { class: "contact-form" } do |f| %>
+      <div class="form-group">
+        <label for="name">Name</label>
+        <%= f.text_field :name, class: "form-control", id: "name", placeholder: "Your name", required: true %>
+      </div>
+
+      <div class="form-group">
+        <label for="email">Email</label>
+        <%= f.email_field :email, class: "form-control", id: "email", placeholder: "you@example.com", required: true %>
+      </div>
+
+      <div class="form-group">
+        <label for="inquiry">Inquiry</label>
+        <%= f.text_area :inquiry, class: "form-control", id: "inquiry", rows: 5, placeholder: "How can I help you?", required: true %>
+      </div>
+
+      <div class="form-group" style="text-align:center;">
+        <%= f.submit "Send Message", class: "btn btn-primary" %>
+      </div>
+    <% end %>
+  </div>
+</div>
+      </div>
+    </div>
+
+<!-- TESTIMONIALS -->
+    <div class="five">
+      <div class="testimonial-section">
+        <h2></h2><br>
+      </div>
+    </div>
+
+  <!-- CONTACT FORM -->
+<div class="six">
+  <div class="info-section">
+  </div>
     <div class="info-section">
       <div class='info'>
         <p>Michael Stephen Shea</p>
@@ -89,6 +128,7 @@
       </div>
       <p class="contact-instructions" style="text-align:center;"><br><br><i>Feel free to connect with me on LinkedIn!<br>Or email me at </i><a style="color:#b8860b;" href = "mailto: m.shea2481@gmail.com">m.shea2481@gmail.com</a></p>
     </div>
+  </div>
   </div>
 <!-- FOOTER -->
     <div class="seven">
