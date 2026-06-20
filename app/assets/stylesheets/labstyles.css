@@ -517,6 +517,12 @@ p {
   min-height: 600px;
 }
 
+/* INQUIRY PAGE */
+
+.soccer-page-two.new-inquiry {
+  padding-top: 7rem !important;
+}
+
 
 /* BUY PACKAGES PAGE */
 
