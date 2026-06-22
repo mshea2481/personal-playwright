@@ -632,7 +632,7 @@ p {
 .contact-page .six {
   grid-row: 3/5;
   padding-top: 11em !important;
-  padding-bottom: 11em !important;
+  padding-bottom: 20em !important;
 }
 
 #linkedin-link {
