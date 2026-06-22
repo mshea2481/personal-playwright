@@ -421,10 +421,11 @@ p {
 }
 
 .footer-menu-right {
-  transform: scale(.4);
   list-style: none;
   display: flex;
   margin-right: 3%;
+  font-size: 11px;
+  font-weight: bold;
 }
 
 .footer-menu-right-fb {
