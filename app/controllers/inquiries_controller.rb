@@ -20,6 +20,7 @@ class InquiriesController < ApplicationController
     params.require(:inquiry).permit(
       :name,
       :email,
+      :phone,
       :message
     )
   end
