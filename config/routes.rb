@@ -21,4 +21,13 @@ Rails.application.routes.draw do
   get "portfolio" => "pages#portfolio", as: :portfolio
   get "resume" => "pages#resume", as: :resume
   get "testimonials" => "pages#testimonials", as: :testimonials
+    # Admin auth
+  get    "admin/login"  => "sessions#new",     as: :admin_login
+  post   "admin/login"  => "sessions#create",  as: :admin_login_create
+  delete "admin/logout" => "sessions#destroy", as: :admin_logout
+
+  # Admin area
+  namespace :admin do
+    resources :inquiries, only: [:index]
+  end
 end
