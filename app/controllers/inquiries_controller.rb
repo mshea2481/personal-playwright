@@ -8,7 +8,7 @@ class InquiriesController < ApplicationController
     @inquiry = Inquiry.new(inquiry_params)
 
     if @inquiry.save
-      redirect_to root_path, notice: "Inquiry submitted successfully."
+      redirect_to root_path, notice: "Inquiry submitted successfully. Thank you for reaching out!"
     else
       render :new, status: :unprocessable_entity
     end
