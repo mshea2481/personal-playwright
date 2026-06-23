@@ -13,6 +13,7 @@ test('inquiry form', async ({ page }) => {
   await page.getByLabel('Phone').fill('123-456-7890');
   await page.getByLabel('Message').fill('This is a test inquiry.');
   await page.getByText('Send Inquiry').click();
+  
 
 // Expects a success alert to be visible.
   await expect(page.getByText('Inquiry submitted successfully!')).toBeVisible();
