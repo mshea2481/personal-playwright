@@ -2,7 +2,7 @@
 
 import { test, expect } from '@playwright/test';
 
-test('inquiry form', async ({ page }) => {
+test('inquiry form success behavior', async ({ page }) => {
   await page.goto('http://localhost:3000/');
 
 // Click the get ABOUT ME menu item and INQUIRIES submenu item. Fill out form field and submit.
