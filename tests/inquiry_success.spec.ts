@@ -3,15 +3,22 @@
 import { test, expect } from '@playwright/test';
 
 test('inquiry form success behavior', async ({ page }) => {
-  await page.goto('http://localhost:3000/');
+  const testInquiry = {
+    name: `Test User${Date.now()}`,
+    email: `testuser${Date.now()}@example.com`,
+    phone: '123-456-9999',
+    message: `This is a test inquiry. ${Date.now()}`,
+  };
+
+await page.goto('http://localhost:3000/');
 
 // Click the get ABOUT ME menu item and INQUIRIES submenu item. Fill out form field and submit.
   await page.getByRole('button', { name: 'ABOUT ME' }).click();
   await page.getByRole('link', { name: 'INQUIRIES' }).click();
-  await page.getByLabel('Name').fill('Test User');
-  await page.getByLabel('Email').fill('testuser@example.com');
-  await page.getByLabel('Phone').fill('123-456-7890');
-  await page.getByLabel('Message').fill('This is a test inquiry.');
+  await page.getByLabel('Name').fill(testInquiry.name);
+  await page.getByLabel('Email').fill(testInquiry.email);
+  await page.getByLabel('Phone').fill(testInquiry.phone);
+  await page.getByLabel('Message').fill(testInquiry.message);
   await page.getByText('Send Inquiry').click();
 
 
