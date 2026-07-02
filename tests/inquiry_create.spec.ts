@@ -7,7 +7,7 @@ test('inquiry form data saves and displays correctly in admin', async ({ page })
     name: `Test User${Date.now()}`,
     email: `testuser${Date.now()}@example.com`,
     phone: '123-456-9999',
-    message: `This is a test inquiry. PRAISE THE LORD JESUS CHRIST! AMEN! ${Date.now()}`,
+    message: `This is a test inquiry. ${Date.now()}`,
   };
 
   await page.goto('http://localhost:3000/');

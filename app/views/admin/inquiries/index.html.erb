@@ -1,33 +1,78 @@
 <div class="container" style="margin-top: 40px;">
   <div style="display: flex; justify-content: space-between; align-items: center;">
-    <h1>Inquiries</h1>
+    <h1>Admin Dashboard</h1>
     <%= button_to "Log Out", admin_logout_path, method: :delete, class: "btn btn-outline-secondary" %>
   </div>
 
-  <% if @inquiries.any? %>
-    <table class="table table-striped" style="margin-top: 20px;">
-      <thead>
-        <tr>
-          <th>Name</th>
-          <th>Email</th>
-          <th>Phone</th>
-          <th>Message</th>
-          <th>Received</th>
-        </tr>
-      </thead>
-      <tbody>
-        <% @inquiries.each do |inquiry| %>
-          <tr>
-            <td><%= inquiry.name %></td>
-            <td><%= inquiry.email %></td>
-            <td><%= inquiry.phone %></td>
-            <td><%= inquiry.message %></td>
-            <td><%= inquiry.created_at.strftime("%b %d, %Y %l:%M %p") %></td>
-          </tr>
-        <% end %>
-      </tbody>
-    </table>
-  <% else %>
-    <p style="margin-top: 20px;">No inquiries yet.</p>
-  <% end %>
+  <!-- Bootstrap Tabs -->
+  <ul class="nav nav-tabs" style="margin-top: 20px;">
+    <li class="nav-item">
+      <a class="nav-link active" data-toggle="tab" href="#inquiries">Inquiries</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" data-toggle="tab" href="#contact-messages">Contact Messages</a>
+    </li>
+  </ul>
+
+  <div class="tab-content" style="margin-top: 20px;">
+
+    <!-- Inquiries Tab -->
+    <div id="inquiries" class="tab-pane fade show active">
+      <% if @inquiries.any? %>
+        <table class="table table-striped">
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Email</th>
+              <th>Phone</th>
+              <th>Message</th>
+              <th>Received</th>
+            </tr>
+          </thead>
+          <tbody>
+            <% @inquiries.each do |inquiry| %>
+              <tr>
+                <td><%= inquiry.name %></td>
+                <td><%= inquiry.email %></td>
+                <td><%= inquiry.phone %></td>
+                <td><%= inquiry.message %></td>
+                <td><%= inquiry.created_at.strftime("%b %d, %Y %l:%M %p") %></td>
+              </tr>
+            <% end %>
+          </tbody>
+        </table>
+      <% else %>
+        <p>No inquiries yet.</p>
+      <% end %>
+    </div>
+
+    <!-- Contact Messages Tab -->
+    <div id="contact-messages" class="tab-pane fade">
+      <% if @contact_messages.any? %>
+        <table class="table table-striped">
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Email</th>
+              <th>Message</th>
+              <th>Received</th>
+            </tr>
+          </thead>
+          <tbody>
+            <% @contact_messages.each do |contact_message| %>
+              <tr>
+                <td><%= contact_message.name %></td>
+                <td><%= contact_message.email %></td>
+                <td><%= contact_message.message %></td>
+                <td><%= contact_message.created_at.strftime("%b %d, %Y %l:%M %p") %></td>
+              </tr>
+            <% end %>
+          </tbody>
+        </table>
+      <% else %>
+        <p>No contact messages yet.</p>
+      <% end %>
+    </div>
+
+  </div>
 </div>

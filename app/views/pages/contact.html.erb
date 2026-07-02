@@ -79,11 +79,9 @@
   <div class="info-section" style="padding-top: 10rem;">
     <h2 class="contact-form-heading" style="text-align:center;">Get In Touch</h2>
 
-    <%= form_with model: Inquiry.new,
-              url: inquiries_path,
-              method: :post,
-              local: true,
-              html: { class: "contact-form" } do |f| %>
+<%= form_with model: ContactMessage.new,
+              url: contact_messages_path,
+              local: true do |f| %>
 
       <div class="form-group">
         <label for="name">Name</label>
