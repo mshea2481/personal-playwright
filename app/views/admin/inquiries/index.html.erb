@@ -5,7 +5,7 @@
   </div>
 
   <!-- Bootstrap Tabs -->
-  <ul id="admin-tabs" class="nav nav-tabs" style="margin-top: 20px;">
+  <ul id="admin-tabs" class="nav nav-tabs" style="margin-top: 20px; position:absolute;">
     <li class="nav-item">
       <a class="nav-link active" data-toggle="tab" href="#inquiries">Inquiries</a>
     </li>
@@ -18,6 +18,9 @@
 
     <!-- Inquiries Tab -->
     <div id="inquiries" class="tab-pane fade show active">
+      <div style="display: flex; justify-content: flex-end; margin-bottom: 10px;">
+        <span class="badge badge-secondary" style="font-size: 0.9rem;"><%= @inquiries.count %> <%= 'inquiry'.pluralize(@inquiries.count) %></span>
+      </div>
       <% if @inquiries.any? %>
         <table class="table table-striped">
           <thead>
@@ -48,6 +51,9 @@
 
     <!-- Contact Messages Tab -->
     <div id="contact-messages" class="tab-pane fade">
+      <div style="display: flex; justify-content: flex-end; margin-bottom: 10px;">
+        <span class="badge badge-secondary" style="font-size: 0.9rem;"><%= @contact_messages.count %> <%= 'message'.pluralize(@contact_messages.count) %></span>
+      </div>
       <% if @contact_messages.any? %>
         <table class="table table-striped">
           <thead>

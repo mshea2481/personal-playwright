@@ -2,7 +2,7 @@
 
 import { test, expect } from '@playwright/test';
 
-test('inquiry form data saves and displays correctly in admin', async ({ page }) => {
+test('inquiry form data saves to db and displays correctly in admin', async ({ page }) => {
   const testInquiry = {
     name: `Test User${Date.now()}`,
     email: `testuser${Date.now()}@example.com`,
