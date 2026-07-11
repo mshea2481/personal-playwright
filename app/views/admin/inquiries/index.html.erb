@@ -52,7 +52,7 @@
     <!-- Contact Messages Tab -->
     <div id="contact-messages" class="tab-pane fade">
       <div style="display: flex; justify-content: flex-end; margin-bottom: 10px;">
-        <span class="badge badge-secondary" style="font-size: 0.9rem;"><%= @contact_messages.count %> <%= 'message'.pluralize(@contact_messages.count) %></span>
+        <span class="badge badge-secondary" style="font-size: 0.9rem;"><%= @contact_messages.count %> <%= 'contact message'.pluralize(@contact_messages.count) %></span>
       </div>
       <% if @contact_messages.any? %>
         <table class="table table-striped">
