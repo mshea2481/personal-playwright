@@ -1,5 +1,3 @@
-// @ts-check
-
 import { Page, BrowserContext, Locator } from '@playwright/test';
 
 export class AdminDashboardPage {
@@ -18,13 +16,13 @@ export class AdminDashboardPage {
     constructor(page: Page, context: BrowserContext) {
         this.page = page;
         this.context = context; 
-        this.LOGOUT_BUTTON = page.getByRole('link', { name: 'Log Out' });
+        this.LOGOUT_BUTTON = page.getByRole('button', { name: 'Log Out' });
         this.INQUIRY_TAB = page.getByRole('link', { name: 'Inquiries' });
         this.CONTACT_MESSAGES_TAB = page.getByRole('link', { name: 'Contact Messages' });
-        this.INQUIRIES_TABLE = page.locator('table');
-        this.CONTACT_MESSAGES_TABLE = page.locator('table');
-        this.INQUIRIES_TABLE_ROWS = page.locator('table tr');
-        this.CONTACT_MESSAGES_TABLE_ROWS = page.locator('table tr');
+        this.INQUIRIES_TABLE = page.getByTestId('inquiries-table');
+        this.CONTACT_MESSAGES_TABLE = page.getByTestId('contact-messages-table');
+        this.INQUIRIES_TABLE_ROWS = this.INQUIRIES_TABLE.locator('tbody tr'); 
+        this.CONTACT_MESSAGES_TABLE_ROWS = this.CONTACT_MESSAGES_TABLE.locator('tbody tr');
         this.INQUIRIES_COUNT_BADGE = page.locator('span', { hasText: 'inquiries' });
         this.CONTACT_MESSAGES_COUNT_BADGE = page.locator('span', { hasText: 'contact messages' });
     }
@@ -40,5 +38,8 @@ export class AdminDashboardPage {
     }
     async logoutFromAdmin(): Promise<void> {
         await this.LOGOUT_BUTTON.click();
+    }
+    async getInquiryRowByText(text: string): Promise<Locator> {
+        return this.INQUIRIES_TABLE.locator('tr', { hasText: text });
     }
 }

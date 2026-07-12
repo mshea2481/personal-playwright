@@ -1,5 +1,3 @@
-// @ts-check
-
 import { Page, BrowserContext, Locator } from '@playwright/test';
 import { testConfig } from '../../testConfig';
 

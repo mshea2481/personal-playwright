@@ -1,5 +1,3 @@
-// @ts-check
-
 import type { Page, BrowserContext, Locator } from '@playwright/test';
 
 export class InquiryFormPage { 
@@ -17,7 +15,7 @@ export class InquiryFormPage {
         this.sendInquiryButton = page.getByRole('button', { name: 'Send Inquiry' });
     }
 
-    async goto() {
+    async navigateToURL(): Promise<void> {
         await this.page.goto('http://localhost:3000/inquiries/new');
     }
     
@@ -29,8 +27,8 @@ export class InquiryFormPage {
         await this.emailInput.fill(text);
     }
 
-    async addPhone(text: string) {
-        await this.phoneInput.fill(text);
+    async addPhone(phone: string) {
+        await this.phoneInput.fill(phone);
     }
 
     async addMessage(text: string) {
