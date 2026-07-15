@@ -1,5 +1,3 @@
-// @ts-check
-
 import { test, expect } from '@playwright/test';
 
 test('inquiry form success behavior', async ({ page }) => {
