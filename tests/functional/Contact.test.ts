@@ -1,6 +1,6 @@
 import test from '@lib/BaseTest';
 import { expect } from '@playwright/test';
-import { createTestContactMessage } from '../lib/TestData';
+import { createTestContactMessage } from '@lib/TestData';
 
 test(`Verify a Contact Message is created and displays correctly in the Admin Dashboard`, { tag: '@Smoke' }, async ({ adminLoginPage, adminDashboardPage, contactPage }) => {
     const testContactMessage = createTestContactMessage();
