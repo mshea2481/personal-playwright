@@ -42,4 +42,7 @@ export class AdminDashboardPage {
     async getInquiryRowByText(text: string): Promise<Locator> {
         return this.INQUIRIES_TABLE.locator('tr', { hasText: text });
     }
+    async getContactMessageRowByText(text: string): Promise<Locator> {
+    return this.CONTACT_MESSAGES_TABLE.locator('tr', { hasText: text });
+    }
 }
