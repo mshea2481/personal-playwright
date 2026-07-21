@@ -4,20 +4,27 @@ class SessionsController < ApplicationController
   end
 
   def create
-    admin_username = Rails.application.credentials.admin_username
-    admin_password = Rails.application.credentials.admin_password
+    user = User.find_by(username: params[:username])
 
-    if params[:username] == admin_username && params[:password] == admin_password
-      session[:admin_logged_in] = true
-      redirect_to admin_inquiries_path, notice: "Logged in successfully."
+    if user&.authenticate(params[:password])
+      session[:user_id] = user.id
+      respond_to do |format|
+        format.html { redirect_to admin_inquiries_path, notice: "Logged in successfully." }
+        format.json { render json: { status: "ok"}, status: :ok }
+      end
     else
-      flash.now[:alert] = "Invalid username or password."
-      render :new, status: :unprocessable_entity
+      respond_to do |format|
+        format.html do
+          flash.now[:alert] = "Invalid username or password."
+          render :new, status: :unprocessable_entity
+        end
+        format.json { render json: { error: "Invalid username or password" }, status: "unauthorized" }
+      end
     end
   end
 
   def destroy
-    session[:admin_logged_in] = nil
+    session[:user_id] = nil
     redirect_to admin_login_path, notice: "Logged out."
   end
 end

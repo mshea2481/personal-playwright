@@ -22,14 +22,24 @@ Rails.application.routes.draw do
   get "portfolio" => "pages#portfolio", as: :portfolio
   get "resume" => "pages#resume", as: :resume
   get "testimonials" => "pages#testimonials", as: :testimonials
-    # Admin auth
+  
+  # Admin auth
   get    "admin/login"  => "sessions#new",     as: :admin_login
   post   "admin/login"  => "sessions#create",  as: :admin_login_create
   delete "admin/logout" => "sessions#destroy", as: :admin_logout
 
-  # Admin area
+  # Admin area (HTML Dashboard)
   namespace :admin do
     resources :inquiries, only: [:index]
     resources :contact_messages, only: [:index] 
+  end
+
+  #API routes (JSON)
+  namespace :api, defaults: { format: :json } do
+    namespace :v1 do
+      resources :inquiries, only: [:index, :show, :create, :update, :destroy]
+      resources :contact_messages, only: [:index, :show, :create, :update, :destroy]
+      post "admin/login" => "sessions#create", as: :api_admin_login
+    end
   end
 end
