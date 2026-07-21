@@ -4,7 +4,7 @@ class Admin::BaseController < ApplicationController
   private
 
   def require_admin_login
-    unless session[:admin_logged_in]
+    unless session[:user_id] && User.exists?(session[:user_id])
       redirect_to admin_login_path, alert: "Please log in to continue."
     end
   end
