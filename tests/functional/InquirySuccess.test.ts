@@ -1,12 +1,8 @@
 import { test, expect } from '@playwright/test';
+import { createTestInquiry } from '@lib/TestData';
 
 test('inquiry form success behavior (homepage start path)', async ({ page }) => {
-  const testInquiry = {
-    name: `Test User${Date.now()}`,
-    email: `testuser${Date.now()}@example.com`,
-    phone: '123-456-9999',
-    message: `This is a test inquiry. ${Date.now()}`,
-  };
+  const testInquiry = createTestInquiry();    
 
 await page.goto('http://localhost:3000/');
 

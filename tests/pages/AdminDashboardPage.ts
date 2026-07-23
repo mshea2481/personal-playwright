@@ -23,8 +23,8 @@ export class AdminDashboardPage {
         this.CONTACT_MESSAGES_TABLE = page.getByTestId('contact-messages-table');
         this.INQUIRIES_TABLE_ROWS = this.INQUIRIES_TABLE.locator('tbody tr'); 
         this.CONTACT_MESSAGES_TABLE_ROWS = this.CONTACT_MESSAGES_TABLE.locator('tbody tr');
-        this.INQUIRIES_COUNT_BADGE = page.locator('span', { hasText: 'inquiries' });
-        this.CONTACT_MESSAGES_COUNT_BADGE = page.locator('span', { hasText: 'contact messages' });
+        this.INQUIRIES_COUNT_BADGE = page.locator('#inquiries .badge-secondary');
+        this.CONTACT_MESSAGES_COUNT_BADGE = page.locator('#contact-messages .badge-secondary');
     }
 
     async navigateToURL(): Promise<void> { 
