@@ -3,7 +3,7 @@
 import { test, expect } from '@playwright/test';
 
 test('has title', async ({ page }) => {
-  await page.goto('http://localhost:3000/');
+  await page.goto('/');
 
 // Click the get started link.
   await page.getByRole('link', { name: 'LinkedIn' }).click();

@@ -4,7 +4,7 @@ import { createTestInquiry } from '@lib/TestData';
 test('inquiry form success behavior (homepage start path)', async ({ page }) => {
   const testInquiry = createTestInquiry();    
 
-await page.goto('http://localhost:3000/');
+await page.goto('/');
 
 // Click the get ABOUT ME menu item and INQUIRIES submenu item. Fill out form field and submit.
   await page.getByRole('button', { name: 'ABOUT ME' }).click();

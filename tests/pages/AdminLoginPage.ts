@@ -21,8 +21,8 @@ export class AdminLoginPage {
     }
 
     async loginToAdmin(): Promise<void> {
-        await this.USERNAME_EDITBOX.fill(testConfig.username);
-        await this.PASSWORD_EDITBOX.fill(testConfig.password);
+        await this.USERNAME_EDITBOX.fill(testConfig.adminUsername);
+        await this.PASSWORD_EDITBOX.fill(testConfig.adminPassword);
         await this.LOGIN_BUTTON.click();
     }
 }

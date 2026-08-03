@@ -3,7 +3,7 @@
 import { test, expect } from '@playwright/test';
 
 test('confirm submenu item link works', async ({ page }) => {
-  await page.goto('http://localhost:3000/');
+  await page.goto('/');
 
 // Click the get ABOUT ME menu item and INQUIRIES submenu item.
   await page.getByRole('button', { name: 'ABOUT ME' }).click();

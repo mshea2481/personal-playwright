@@ -16,7 +16,7 @@ export class InquiryFormPage {
     }
 
     async navigateToURL(): Promise<void> {
-        await this.page.goto('http://localhost:3000/inquiries/new');
+        await this.page.goto('/inquiries/new');
     }
     
     async addName(text: string) {
