@@ -11,6 +11,7 @@
     "paths": {
       "@pages/*":["./tests/pages/*"],
       "@lib/*":["./tests/lib/*"],
+      "@components/*":["./tests/components/*"],
     }
   },
   "include": ["tests/**/*.ts", "playwright.config.ts"]
