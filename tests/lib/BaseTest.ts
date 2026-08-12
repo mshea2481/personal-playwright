@@ -3,7 +3,7 @@ import { InquiryFormPage } from '@pages/InquiryFormPage';
 import { AdminLoginPage } from '@pages/AdminLoginPage';
 import { AdminDashboardPage } from '@pages/AdminDashboardPage';
 import { ContactPage } from '@pages/ContactPage';
-import { NavBar } from '@components/NavBar';
+import { Header } from '@components/Header';
 
 export const test = baseTest.extend<{
   inquiryFormPage: InquiryFormPage;
@@ -11,7 +11,7 @@ export const test = baseTest.extend<{
   adminDashboardPage: AdminDashboardPage;
   contactPage: ContactPage;
   testInfo: TestInfo;
-  navBar: NavBar;
+  header: Header;
 }>({
   inquiryFormPage: async ({ page, context }, use) => { 
     await use(new InquiryFormPage(page, context));
@@ -28,8 +28,8 @@ export const test = baseTest.extend<{
   testInfo: async ({}, use, testInfo) => {
     await use(testInfo);
   },
-  navBar: async ({ page, context }, use) => {
-    await use(new NavBar(page, context));
+  header: async ({ page, context }, use) => {
+    await use(new Header(page, context));
   }
 })
 
