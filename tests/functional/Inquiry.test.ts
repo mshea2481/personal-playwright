@@ -2,8 +2,8 @@ import test from '@lib/BaseTest';
 import { createTestInquiry } from '@lib/TestData';
 import { expect } from '@playwright/test';
 
-test(`Verify an Inquiry is created and displays correctly in the Admin Dashboard`, { tag: '@Smoke'}, async ({ adminLoginPage, adminDashboardPage, inquiryFormPage }) => {
-    const testInquiry = createTestInquiry();
+test(`Verify an Inquiry is created and displays correctly in the Admin Dashboard`, { tag: '@Smoke'}, async ({ adminLoginPage, adminDashboardPage, inquiryFormPage, workerId }) => {
+    const testInquiry = createTestInquiry(workerId);
 
     let inquiryRowCountBefore: number;
 
