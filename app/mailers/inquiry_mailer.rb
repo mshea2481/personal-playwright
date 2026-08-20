@@ -7,9 +7,6 @@ class InquiryMailer < ApplicationMailer
       subject: "New Inquiry Received"
     )
   end
-
-  if @inquiry.save
-  InquiryMailer.new_inquiry(@inquiry).deliver_later
-  redirect_to root_path, notice: "Inquiry submitted successfully."
-  
 end
+
+
