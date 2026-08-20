@@ -1,24 +1,42 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+A personal Ruby on Rails portfolio app with contact and inquiry forms, an admin
+dashboard, and Playwright tests.
 
-Things you may want to cover:
+## Setup
 
-* Ruby version
+You will need Ruby, Node.js, and SQLite installed.
 
-* System dependencies
+```bash
+bundle install
+npm install
+```
 
-* Configuration
+Create a `.env` file with an admin login for local development:
 
-* Database creation
+```dotenv
+ADMIN_TEST_USERNAME=xxxx
+ADMIN_TEST_PASSWORD=xxxx
+```
 
-* Database initialization
+Prepare the database and start the app:
 
-* How to run the test suite
+```bash
+bin/rails db:prepare
+bin/dev
+```
 
-* Services (job queues, cache servers, search engines, etc.)
+Visit [http://localhost:3000](http://localhost:3000).
 
-* Deployment instructions
+## Tests
 
-* ...
+For Playwright tests, create `.env.test` with the same admin credentials, then
+run:
+
+```bash
+npx playwright install
+npx playwright test
+```
+
+Playwright starts the Rails test server automatically at
+`http://127.0.0.1:3100` and uses a separate test database.
