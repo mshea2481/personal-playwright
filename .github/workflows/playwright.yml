@@ -29,6 +29,8 @@ jobs:
     - name: Run Playwright tests
       env:
         RAILS_ENV: test
+        ADMIN_TEST_USERNAME: ${{ secrets.ADMIN_TEST_USERNAME }}
+        ADMIN_TEST_PASSWORD: ${{ secrets.ADMIN_TEST_PASSWORD }}
       run: npx playwright test
     - uses: actions/upload-artifact@v4
       if: ${{ !cancelled() }}
