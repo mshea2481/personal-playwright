@@ -11,7 +11,7 @@ export interface TestContactMessage {
     message: string;
 }
 
-export function createTestInquiry(workerId?: number,overrides: Partial<TestInquiry> = {}): TestInquiry {
+export function createTestInquiry(overrides: Partial<TestInquiry> = {}, workerId?: number): TestInquiry {
     const timestamp = Date.now();
     const prefix = workerId !== undefined ? `Worker${workerId}_` : ''; 
     return {
@@ -23,7 +23,7 @@ export function createTestInquiry(workerId?: number,overrides: Partial<TestInqui
     };
 }
 
-export function createTestContactMessage(workerId?: number,overrides: Partial<TestContactMessage> = {}): TestContactMessage {
+export function createTestContactMessage(overrides: Partial<TestContactMessage> = {},workerId?: number): TestContactMessage {
     const timestamp = Date.now();
     const prefix = workerId !== undefined ? `Worker${workerId}_` : ''; 
     return {
