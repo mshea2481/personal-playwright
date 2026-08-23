@@ -26,3 +26,14 @@ $(window).scroll(function() {
         $("#mobileScroll").removeClass("active");
     }
 });
+
+document.addEventListener('DOMContentLoaded', () => {
+  window.setTimeout(() => {
+    document.querySelectorAll('.alert').forEach((alert) => {
+      alert.style.transition = 'opacity 300ms ease';
+      alert.style.opacity = '0';
+
+      window.setTimeout(() => alert.remove(), 300);
+    });
+  }, 5000);
+});

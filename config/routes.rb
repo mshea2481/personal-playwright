@@ -34,7 +34,7 @@ Rails.application.routes.draw do
     resources :contact_messages, only: [:index] 
   end
 
-  #API routes (JSON)
+  # API routes (JSON)
   namespace :api, defaults: { format: :json } do
     namespace :v1 do
       resources :inquiries, only: [:index, :show, :create, :update, :destroy]

@@ -40,14 +40,6 @@
   overflow: hidden;
   height: 100%;
 }
-.home-page .two {
-  height: 25vh;
-  transform: translateY(-38px);
-}
-.home-page h1 {
-  text-shadow: 1px 1px 2px #000000 !important;
-  font-size: 47px;
-}
 .three {
   grid-column: 1 / 2;
   grid-row: 5 / 8;
@@ -458,6 +450,24 @@ p {
 }
 
 
+/* HOME PAGE */
+
+.home-page .two {
+  height: 30vh;
+  transform: translateY(-38px);
+}
+.home-page .five {
+  margin-top: 100px;
+}
+.home-page h1 {
+  text-shadow: 1px 1px 2px #000000 !important;
+  font-size: 47px;
+}
+
+.homepagehero img {
+  filter: brightness(70%); /* Dims the image to 50% brightness */
+}
+
 
 /* SOCCER PAGE */
 
@@ -505,12 +515,20 @@ p {
   text-align: center;
 }
 
+.construction { 
+  text-align: center; 
+}
+
 .soccer-page-three, .soccer-page-four {
   /* display: none !important; */
   /* max-height: 10%; */
 }
 
 /* ABOUT PAGE */
+.about.soccer-page-two img {
+  filter: brightness(50%); /* Dims the image to 50% brightness */
+}
+
 .testimonial-section.image-gallery {
   display: flex;
   justify-content: center;
@@ -576,6 +594,10 @@ p {
   max-height: fit-content;
 }
 
+.packages-page-five {
+  grid-row: auto;
+}
+
 .packages-page-three h1 {
   font-size: 36px;
 }
@@ -612,12 +634,32 @@ p {
 
 /* RESUME PAGE */
 
-.resume-header .soccer-page-header-text {
-  position: relative;
-  transform: translateY(0px);
-  top: 0;
-  left: 0;
-  padding-bottom: 18px;
+.resume-hero {
+  height: 180px;
+}
+
+.resume-hero img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transform: none;
+  filter: brightness(60%); /* Dims the image to 50% brightness */
+
+}
+
+.resume-document {
+  padding: 1.5rem;
+  background: white;
+  padding-top: 4rem;
+}
+
+.resume-document iframe {
+  display: block;
+  width: 95%;
+  height: 700px;
+  margin: 0 auto;
+  border: 0;
 }
 
 .soccer-page-two.resume {
@@ -839,10 +881,6 @@ a[text=Menu] {
     z-index: -1;
     max-width: 100vw;
     overflow: hidden;
-  }
-  .home-page .two {
-    /* max-width: 100% !important; */
-    /* min-width: 100% !important; */
   }
   .herocontainer {
     height: 100%;
