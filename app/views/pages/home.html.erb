@@ -9,26 +9,16 @@
             <li class="header-menu-center"><a style="color:#b8860b;" href=''>HOME</a></li>
             <li class="header-menu-center dropdown">
               <a href='services.html' class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">ABOUT ME<span class="caret"></span></a>
-              <!-- <div class='dropdown-content'>
-                <ul class="dropdown-menu" aria-labelledby="dropdownMenu">
-                  <li class="dropdown-item"><a href="#">Spray Tans</a></li>
-                  <li class="dropdown-item"><a href="#">Hair</a></li>
-                  <li class="dropdown-item"><a href="#">Makeup</a></li>
-                  <li class="dropdown-item"><a href="#">Waxing</a></li>
-                </ul>
-              </div> -->
               <ul class="dropdown-menu vip-tracker">
-                <li><a href="about">ABOUT ME</a></li>
-                <li><a href="resume">RESUME</a></li>
-                <li><a href="portfolio">PORTFOLIO</a></li>
-                <li><a href="inquiries/new">INQUIRIES</a></li>
+                <li><a href="/about">ABOUT ME</a></li>
+                <li><a href="/resume">RESUME</a></li>
+                <li><a href="/portfolio">PORTFOLIO</a></li>
+                <li><a href="/inquiries/new">INQUIRIES</a></li>
               </ul>
             </li>
             <li id='scroll-left-align' class="header-menu-center"><a href='/'><%= image_tag "mss11try.png", id: "header-logo-shrink" %></a></li>
-            <li class="header-menu-center"><a href='coolpage'>COOL PAGE</a></li>
-            <!-- <li class="header-menu-center"><a href='gallery.html'>GALLERY</a></li> -->
-            <li class="header-menu-center"><a href='contact'>CONTACT</a></li>
-            <!-- <li class="header-menu-center"><a href='reviews.html'>REVIEWS</a></li> -->
+            <li class="header-menu-center"><a href='/coolpage'>COOL PAGE</a></li>
+            <li class="header-menu-center"><a href='/contact'>CONTACT</a></li>
           </ul>
         </div>
       </nav>
@@ -37,7 +27,6 @@
       <div class='mobile-fixed-header' id='mobileScroll'>
         <div class='menu-buttons'>
           <ul class='unorderedlist-mobile-fixed'>
-            <!-- <div class=""> -->
             <li class='mobile-menu-left'>
               <div class="first-test">
                 <a class="btn btn primary" href="#collapseExampleFirst" data-toggle="collapse" data-target="#collapseExampleFirst" role="button" aria-controls="#collapseExampleFirst" aria-expanded="false"><%= image_tag "hamburger-menu-icon.png", id: "header-menu-mobile" %></a>
@@ -47,23 +36,22 @@
                   <li class="mobile-left-menu">
                     <a style="color:#b8860b;" class='border-top' href='/'>HOME</a>
                   </li>
-                    <!-- <div class=""> -->
                   <li class="mobile-left-menu">
                     <div class="test">
                       <a class="dropdown-toggle" href="#collapseExample" data-toggle="collapse" role="button" aria-controls="#collapseExample" aria-expanded="false">ABOUT ME</a>
                     </div>
                     <div class="collapse" id="collapseExample">
                       <ul class="menu">
-                        <li><a href="about">ABOUT ME</a></li>
-                        <li><a href="resume">RESUME</a></li>
-                        <li><a href="portfolio">PORTFOLIO</a></li>
-                        <li><a href="testimonials">TESTIMONIALS</a></li>
-                        <li><a href="inquiries">INQUIRIES</a></li>
+                        <li><a href="/about">ABOUT ME</a></li>
+                        <li><a href="/resume">RESUME</a></li>
+                        <li><a href="/portfolio">PORTFOLIO</a></li>
+                        <li><a href="/testimonials">TESTIMONIALS</a></li>
+                        <li><a href="/inquiries/new">INQUIRIES</a></li>
                       </ul>
                     </div>
                   </li>
-                  <li class="mobile-left-menu"><a href='coolpage'>COOL PAGE</a></li>
-                  <li class="mobile-left-menu"><a href='contact'>CONTACT</a></li>
+                  <li class="mobile-left-menu"><a href='/coolpage'>COOL PAGE</a></li>
+                  <li class="mobile-left-menu"><a href='/contact'>CONTACT</a></li>
                 </ul>
               </div>
             </li>
@@ -83,15 +71,10 @@
 
 <!-- ABOUT SECTION -->
     <div class="three">
-        <!-- <p><br><br><br>
-        Michael S. Shea, Senior Software QA Engineer<br><br>
-        10+ Years of Professional QA Experience
-        <br><br>
-        Client Packages Available at VIP.lablocks@gmail.com</p> -->
-        <h2 style="font-weight: bold; color: #b8860b; font-size: 2.4rem;">Michael S. Shea</h2>
-        <h5 style="color: #b8860b; padding-bottom: 15px;">Senior Software QA Engineer</h5>
-        <p>Hi there! I'm a Boston based QA professional with over 10 years of experience ensuring software quality, reliability, and user trust. Outside of work, I stay active — whether I’m at the gym, playing golf, ice hockey, or out bike riding. I also enjoy cooking, traveling, spending time at the beach, and enjoying life with family and friends. As a graduate of the prestiged <%= link_to "Isenberg School of Management", "https://www.isenberg.umass.edu/", style: "color: #b8860b;" %> at the flagship campus, UMass Amherst, I bring a unique combination of technical expertise and business acumen.<br><br>
-        </p>
+      <h2 style="font-weight: bold; color: #b8860b; font-size: 2.4rem;">Michael S. Shea</h2>
+      <h5 style="color: #b8860b; padding-bottom: 15px;">Senior Software QA Engineer</h5>
+      <p>Hi there! I'm a Boston based QA professional with over 10 years of experience ensuring software quality, reliability, and user trust. Outside of work, I stay active — whether I’m at the gym, playing golf, ice hockey, or out bike riding. I also enjoy cooking, traveling, spending time at the beach, and enjoying life with family and friends. As a graduate of the prestiged <%= link_to "Isenberg School of Management", "https://www.isenberg.umass.edu/", style: "color: #b8860b;" %> at the flagship campus, UMass Amherst, I bring a unique combination of technical expertise and business acumen.<br><br>
+      </p>
     </div>
     <div class="four homepage-four">
        <%= image_tag "test.png" %>
@@ -160,8 +143,6 @@
     <div class="seven">
       <ul class='unorderedlistfooter'>
         <li class="footer-menu-left"><a href='https://www.instagram.com/mshea/'><i>site design by<strong> M.Shea</strong></i></a></li>
-        <!-- <li class="footer-menu-right-fb"><a href='https://www.facebook.com'><img src='images/f_logo.png'></a></li> -->
-        <!-- <li class="footer-menu-right"><a href='https://www.instagram.com/estheticsbyash/'><img src='images/i_logo.png'></a></li> -->
       </ul>
     </div>
   </div>
