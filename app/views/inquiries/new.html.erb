@@ -7,15 +7,7 @@
           <ul id='shrink' class='unorderedlist main'>
             <li class="header-menu-center"><a href='/'>HOME</a></li>
             <li class="header-menu-center dropdown">
-              <a href='#' class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">ABOUT ME</a>
-              <!-- <div class='dropdown-content'>
-                <ul class="dropdown-menu" aria-labelledby="dropdownMenu">
-                  <li class="dropdown-item"><a href="#">Spray Tans</a></li>
-                  <li class="dropdown-item"><a href="#">Hair</a></li>
-                  <li class="dropdown-item"><a href="#">Makeup</a></li>
-                  <li class="dropdown-item"><a href="#">Waxing</a></li>
-                </ul>
-              </div> -->
+              <a href='/about' class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">ABOUT ME</a>
               <ul class="dropdown-menu vip-tracker">
                 <li><a href="/about">ABOUT ME</a></li>
                 <li><a href="/resume">RESUME</a></li>
@@ -25,9 +17,7 @@
             </li>
             <li id='scroll-left-align' class="header-menu-center"><a href='/'><%= image_tag "mss11try.png", id: "header-logo-shrink" %></a></li>
             <li class="header-menu-center"><a href='/coolpage'>COOL PAGE</a></li>
-            <!-- <li class="header-menu-center"><a href='gallery.html'>GALLERY</a></li> -->
             <li class="header-menu-center"><a href='/contact'>CONTACT</a></li>
-            <!-- <li class="header-menu-center"><a href='reviews.html'>REVIEWS</a></li> -->
           </ul>
         </div>
       </nav>
@@ -36,7 +26,6 @@
 <div class='mobile-fixed-header' id='mobileScroll'>
   <div class='menu-buttons'>
     <ul class='unorderedlist-mobile-fixed'>
-      <!-- <div class=""> -->
       <li class='mobile-menu-left'>
         <div class="first-test">
           <a class="btn btn primary" href="#collapseExampleFirst" data-toggle="collapse" data-target="#collapseExampleFirst" role="button" aria-controls="#collapseExampleFirst" aria-expanded="false"><%= image_tag "hamburger-menu-icon.png", id: "header-menu-mobile" %></a>
@@ -46,7 +35,6 @@
             <li class="mobile-left-menu">
               <a class='border-top' href='/'>HOME</a>
             </li>
-              <!-- <div class=""> -->
             <li class="mobile-left-menu">
               <div class="test">
                 <a class="dropdown-toggle" href="#collapseExample" data-toggle="collapse" role="button" aria-controls="#collapseExample" aria-expanded="false">ABOUT ME</a>
@@ -74,7 +62,6 @@
 
 <!-- HERO IMAGE -->
     <div class="two soccer-page-two new-inquiry">
-      <!-- <div class='soccer-page-header-background'> -->
         <div class='soccer-page-header mx-auto text-left' style="max-width: 400px;">
         <h1 class="text-center">Inquiry Form</h1><br>
         <%= form_with model: @inquiry, local: true do |f| %>
@@ -104,7 +91,6 @@
         <% end %>
         <div class='soccer-page-header-text'></div>
         </div>
-      <!-- </div> -->
     </div>
 
 <!-- ABOUT SECTION -->
@@ -122,46 +108,9 @@
 <!-- TESTIMONIALS -->
     <div class="five soccer-page-five">
       <div class="testimonial-section">
-        <!-- <h2>Testimonials</h2><br>
-<!-- carousel -->
-        <!-- <div class="carousel-container">
-          <div id="carouselIndicators" class="carousel slide" data-ride="carousel" data-interval="6000">
-            <ol class="carousel-indicators">
-              <li data-target="#carouselIndicators" data-slide-to="0" class="active"></li>
-              <li data-target="#carouselIndicators" data-slide-to="1"></li>
-              <li data-target="#carouselIndicators" data-slide-to="2"></li>
-            </ol>
-            <div class="carousel-inner">
-              <div class="carousel-item active">
-                <div class="testimonials">
-                  <p>"Lab Locks is the best!"<br>
-                    <strong>-Mike S.</strong></p>
-                </div>
-              </div>
-              <div class="carousel-item">
-                <div class="testimonials">
-                  <p>"Bomb picks."<br>
-                    <strong>-OC</strong></p>
-                </div>
-              </div>
-              <div class="carousel-item">
-                <div class="testimonials">
-                  <p>"Omg so good."<br>
-                    <strong>-Zdeno C.</strong></p>
-                </div>
-              </div>
-            </div> -->
-            <!-- <a class="carousel-control-prev" href="#carouselIndicators" role="button" data-slide="prev">
-              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-              <span class="sr-only">Previous</span>
-            </a>
-            <a class="carousel-control-next" href="#carouselIndicators" role="button" data-slide="next">
-              <span class="carousel-control-next-icon" aria-hidden="true"></span>
-              <span class="sr-only">Next</span>
-            </a> -->
-          </div>
-        </div>
       </div>
+<!-- carousel -->
+    </div>
     </div>
 <!-- CMS Section -->
 <div class="six">
@@ -186,7 +135,6 @@
     <div class="seven">
       <ul class='unorderedlistfooter'>
         <li class="footer-menu-left"><a href='https://www.instagram.com/mshea/'><i>site design by<strong> M.Shea</strong></i></a></li>
-        <!-- <li class="footer-menu-right-fb"><a href='https://www.facebook.com/'><img src='images/f_logo.png'></a></li> -->
         <li class="footer-menu-right"><a href='/admin/login'><i>Admin</i></a></li>
       </ul>
     </div>
