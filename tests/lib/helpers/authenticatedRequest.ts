@@ -1,17 +1,12 @@
 import { APIRequestContext, request } from '@playwright/test';
 import { testConfig } from '../../../testConfig';
 
-export type AuthedContext = {
-    request: APIRequestContext;
-    dispose: () => Promise<void>;
-};
-
 /**
- * Logs in as admin and returns an object containing an APIRequestContext
- * with the session cookie already attached and a dispose() helper.
- * This shape matches the fixture usage in ApiFixtures.ts
+ * Logs in as admin and returns an `APIRequestContext` with the session
+ * cookie already attached. The returned context can be disposed via
+ * `context.dispose()`.
  */
-export async function createAuthenticatedContext(baseURL: string): Promise<AuthedContext> {
+export async function createAuthenticatedContext(baseURL: string): Promise<APIRequestContext> {
     const context = await request.newContext({ baseURL });
 
     const response = await context.post('/admin/login', {
@@ -22,13 +17,9 @@ export async function createAuthenticatedContext(baseURL: string): Promise<Authe
     });
 
     if (!response.ok() && response.status() !== 302) {
+        await context.dispose();
         throw new Error(`Admin login failed with status ${response.status()}`);
     }
 
-    return {
-        request: context,
-        dispose: async () => {
-            await context.dispose();
-        },
-    };
+    return context;
 }

@@ -40,8 +40,8 @@ export default defineConfig({
   webServer: {
     command: 'bundle exec rails db:prepare && bundle exec rails server -e test -p 3100',
     url: baseURL,
-    timeout: 120_000,
-    reuseExistingServer: false,
+    timeout: 300_000,
+    reuseExistingServer: true,
     env: {
       ...process.env,
       RAILS_ENV: 'test',
