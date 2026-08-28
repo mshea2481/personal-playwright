@@ -1,8 +1,8 @@
 module Api
   module V1
     class ContactMessagesController < BaseController
-      skip_before_action :authenticate_admin!, only: [:create]
-      before_action :set_contact_message, only: [:show, :destroy]
+      skip_before_action :authenticate_admin!, only: [ :create ]
+      before_action :set_contact_message, only: [ :show, :destroy ]
 
       def index
         contact_messages = ContactMessage.order(created_at: :desc)

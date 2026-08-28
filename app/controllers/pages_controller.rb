@@ -1,7 +1,7 @@
 class PagesController < ApplicationController
   def home
   end
-  
+
   def coolpage
   end
 
@@ -19,5 +19,4 @@ class PagesController < ApplicationController
 
   def testimonials
   end
-  
 end

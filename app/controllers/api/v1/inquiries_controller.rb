@@ -2,8 +2,8 @@ module Api
   module V1
     class InquiriesController < BaseController
       # Allow anyone to submit an inquiry without an admin session
-      skip_before_action :authenticate_admin!, only: [:create]
-    
+      skip_before_action :authenticate_admin!, only: [ :create ]
+
       # POST /api/v1/inquiries
       def create
         inquiry = Inquiry.new(inquiry_params)

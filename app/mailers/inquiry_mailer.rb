@@ -8,5 +8,3 @@ class InquiryMailer < ApplicationMailer
     )
   end
 end
-
-

@@ -10,7 +10,7 @@ class SessionsController < ApplicationController
       session[:user_id] = user.id
       respond_to do |format|
         format.html { redirect_to admin_inquiries_path, notice: "Logged in successfully." }
-        format.json { render json: { status: "ok"}, status: :ok }
+        format.json { render json: { status: "ok" }, status: :ok }
       end
     else
       respond_to do |format|

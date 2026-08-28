@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
-  resources :inquiries, only: [:new, :create]
-  resources :contact_messages, only: [:create]
+  resources :inquiries, only: [ :new, :create ]
+  resources :contact_messages, only: [ :create ]
   get "home" => "pages#home", as: :home
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
@@ -22,7 +22,7 @@ Rails.application.routes.draw do
   get "portfolio" => "pages#portfolio", as: :portfolio
   get "resume" => "pages#resume", as: :resume
   get "testimonials" => "pages#testimonials", as: :testimonials
-  
+
   # Admin auth
   get    "admin/login"  => "sessions#new",     as: :admin_login
   post   "admin/login"  => "sessions#create",  as: :admin_login_create
@@ -30,15 +30,15 @@ Rails.application.routes.draw do
 
   # Admin area (HTML Dashboard)
   namespace :admin do
-    resources :inquiries, only: [:index]
-    resources :contact_messages, only: [:index] 
+    resources :inquiries, only: [ :index ]
+    resources :contact_messages, only: [ :index ]
   end
 
   # API routes (JSON)
   namespace :api, defaults: { format: :json } do
     namespace :v1 do
-      resources :inquiries, only: [:index, :show, :create, :update, :destroy]
-      resources :contact_messages, only: [:index, :show, :create, :update, :destroy]
+      resources :inquiries, only: [ :index, :show, :create, :update, :destroy ]
+      resources :contact_messages, only: [ :index, :show, :create, :update, :destroy ]
       post "admin/login" => "sessions#create", as: :api_admin_login
     end
   end

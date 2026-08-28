@@ -8,6 +8,6 @@
 #     MovieGenre.find_or_create_by!(name: genre_name)
 #   end
 
-User.find_or_create_by!(username: ENV.fetch("ADMIN_TEST_USERNAME")) do |user| 
+User.find_or_create_by!(username: ENV.fetch("ADMIN_TEST_USERNAME")) do |user|
     user.password = ENV.fetch("ADMIN_TEST_PASSWORD")
 end
