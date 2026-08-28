@@ -957,6 +957,10 @@ a[text=Menu] {
     margin: 0 auto;
     display: block;
   }
+  .resume-document {
+    width: 95%;
+    height: 800px;
+  }
 }
 
 /* TABLET & DESKTOP ONLY */
