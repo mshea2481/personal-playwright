@@ -3,7 +3,7 @@ class ContactMessagesController < ApplicationController
     @contact_message = ContactMessage.new(contact_message_params)
 
     if @contact_message.save
-      redirect_to contact_path, notice: "Thanks! I'll get back to you soon."
+      redirect_to contact_path, notice: "Thanks for reaching out! I'll get back to you shortly."
     else
       render "pages/contact", status: :unprocessable_entity
     end
