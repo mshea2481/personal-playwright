@@ -7,7 +7,12 @@
 #   ["Action", "Comedy", "Drama", "Horror"].each do |genre_name|
 #     MovieGenre.find_or_create_by!(name: genre_name)
 #   end
+username_key = Rails.env.production? ? "ADMIN_USERNAME" : "ADMIN_TEST_USERNAME"
+password_key = Rails.env.production? ? "ADMIN_PASSWORD" : "ADMIN_TEST_PASSWORD"
 
-User.find_or_create_by!(username: ENV.fetch("ADMIN_TEST_USERNAME")) do |user|
-    user.password = ENV.fetch("ADMIN_TEST_PASSWORD")
+username = ENV.fetch(username_key)
+password = ENV.fetch(password_key)
+
+User.find_or_create_by!(username: username) do |user|
+    user.password = password
 end
