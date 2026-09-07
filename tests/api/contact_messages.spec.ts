@@ -20,7 +20,9 @@ test.describe('POST /api/v1/contact_messages (public endpoint)', () => {
     });
 
     test('rejects a contact message with a blank name and returns 422', async ({ request }) => {
-        const invalidMessage = createTestContactMessage({ name: '' });
+        const invalidMessage = createTestContactMessage({ 
+            overrides: { name: '' } 
+        });
 
         const response = await request.post('/api/v1/contact_messages', {
             data: { contact_message: invalidMessage },
@@ -34,7 +36,9 @@ test.describe('POST /api/v1/contact_messages (public endpoint)', () => {
     });
 
     test('rejects a contact message with a malformed email and returns 422', async ({ request }) => {
-        const invalidMessage = createTestContactMessage({ email: 'not-an-email' });
+        const invalidMessage = createTestContactMessage({ 
+            overrides: { email: 'not-an-email' } 
+        });
 
         const response = await request.post('/api/v1/contact_messages', {
             data: { contact_message: invalidMessage },

@@ -20,7 +20,9 @@ test.describe('POST /api/v1/inquiries (public endpoint)', () => {
     });
 
     test('rejects an inquiry with a blank name and returns 422', async ({ request }) => {
-        const invalidInquiry = createTestInquiry({ name: '' });
+        const invalidInquiry = createTestInquiry({ 
+            overrides: { name: '' } 
+        });
 
         const response = await request.post('/api/v1/inquiries', {
             data: { inquiry: invalidInquiry },
@@ -34,7 +36,9 @@ test.describe('POST /api/v1/inquiries (public endpoint)', () => {
     });
 
     test('rejects an inquiry with a malformed email and returns 422', async ({ request }) => {
-        const invalidInquiry = createTestInquiry({ email: 'not-an-email' });
+        const invalidInquiry = createTestInquiry({ 
+            overrides: { email: 'not-an-email' } 
+        });
 
         const response = await request.post('/api/v1/inquiries', {
             data: { inquiry: invalidInquiry },
