@@ -3,7 +3,7 @@ import { expect } from '@playwright/test';
 import { createTestContactMessage } from '@lib/TestData';
 
 test(`Verify a Contact Message is created and displays correctly in the Admin Dashboard`, { tag: '@Smoke' }, async ({ adminLoginPage, adminDashboardPage, contactPage, workerId }) => {
-    const testContactMessage = createTestContactMessage(workerId);
+    const testContactMessage = createTestContactMessage({ workerId });
 
     let contactMessageRowCountBefore: number;
 

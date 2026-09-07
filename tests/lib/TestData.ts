@@ -11,9 +11,20 @@ export interface TestContactMessage {
     message: string;
 }
 
-export function createTestInquiry(overrides: Partial<TestInquiry> = {}, workerId?: number): TestInquiry {
+interface CreateTestInquiryOptions {
+    workerId?: number;
+    overrides?: Partial<TestInquiry>;
+}
+
+interface CreateTestContactMessageOptions {
+    workerId?: number;
+    overrides?: Partial<TestContactMessage>;
+}
+
+export function createTestInquiry(options: CreateTestInquiryOptions = {}): TestInquiry {
+    const { workerId, overrides = {} } = options;
     const timestamp = Date.now();
-    const prefix = workerId !== undefined ? `Worker${workerId}_` : ''; 
+    const prefix = workerId !== undefined ? `Worker${workerId}_` : '';
     return {
         name: `${prefix}Test User${timestamp}`,
         email: `${prefix}testuser${timestamp}@example.com`,
@@ -23,9 +34,10 @@ export function createTestInquiry(overrides: Partial<TestInquiry> = {}, workerId
     };
 }
 
-export function createTestContactMessage(overrides: Partial<TestContactMessage> = {},workerId?: number): TestContactMessage {
+export function createTestContactMessage(options: CreateTestContactMessageOptions = {}): TestContactMessage {
+    const { workerId, overrides = {} } = options;
     const timestamp = Date.now();
-    const prefix = workerId !== undefined ? `Worker${workerId}_` : ''; 
+    const prefix = workerId !== undefined ? `Worker${workerId}_` : '';
     return {
         name: `${prefix}Test User${timestamp}`,
         email: `${prefix}testuser${timestamp}@example.com`,
